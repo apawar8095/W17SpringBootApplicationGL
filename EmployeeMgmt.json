@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "bbb1798e-7e2c-4e40-8ec4-850d05378d53",
+		"name": "EmployeeMgmt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31029991"
+	},
+	"item": [
+		{
+			"name": "add-user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"username\": \"vikas\",\r\n    \"password\": \"vikas123\",\r\n    \"roles\": [\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"USER\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/EmployeeApp/emp/add-user"
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-employees",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "vikas123",
+						"username": "vikas"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/EmployeeApp/emp/get-employees"
+			},
+			"response": []
+		},
+		{
+			"name": "add-role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/EmployeeApp/emp/add-role"
+			},
+			"response": []
+		},
+		{
+			"name": "add-employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "vikas123",
+						"username": "vikas"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"CaptianAmerica\",\r\n    \"lastName\": \"Four\",\r\n    \"emailId\": \"Capamerica4@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/EmployeeApp/emp/add-employee"
+			},
+			"response": []
+		},
+		{
+			"name": "delete-employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "vikas123",
+						"username": "vikas"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/EmployeeApp/emp/delete-employee/4"
+			},
+			"response": []
+		},
+		{
+			"name": "update-employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "vikas123",
+						"username": "vikas"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"firstName\": \"CapAmerica\",\r\n    \"lastName\": \"Four\",\r\n    \"emailId\": \"CaptianAmerica@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/EmployeeApp/emp/update-employee"
+			},
+			"response": []
+		},
+		{
+			"name": "get-employee-byid",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "raja123",
+						"username": "raja"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/EmployeeApp/emp/get-employee-byid/3"
+			},
+			"response": []
+		},
+		{
+			"name": "search-employee-firstName",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "vikas123",
+						"username": "vikas"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/EmployeeApp/emp/search-employee/ironman"
+			},
+			"response": []
+		},
+		{
+			"name": "sort-asc",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "raja123",
+						"username": "raja"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/EmployeeApp/emp/sort-asc?order=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EmployeeApp",
+						"emp",
+						"sort-asc"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sort-desc",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "vikas123",
+						"username": "vikas"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/EmployeeApp/emp/sort-desc?order=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"EmployeeApp",
+						"emp",
+						"sort-desc"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
